@@ -5,6 +5,7 @@ import { Outlet, NavLink } from "react-router-dom";
 import { invoices } from "../data";
 
 function Invoice() {
+
   return (
     <div style={{ display: "flex" }}>
       <nav style={{ borderRight: "solid 1px", padding: "1rem" }}>

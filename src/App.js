@@ -1,7 +1,7 @@
 import React from "react";
 import {
   Link,
-  // NavLink,
+  NavLink,
   Route,
   Routes,
   useNavigate,
@@ -19,6 +19,7 @@ function App() {
   function handleTestNavigate() {
     navigate("/home", { replace: true });
   }
+ 
 
   return (
     <div className="App">
@@ -26,7 +27,17 @@ function App() {
 
       <div style={{ borderBottom: "solid 1px", paddingBottom: "1rem" }}>
         <nav>
-          <Link to="/home">Home</Link> | <Link to="/contact">Contact</Link> |
+          {/* <Link to="/home" replace>Home</Link> |  */}
+          <NavLink 
+            to="/home"
+            className={value =>
+              "nav-link-" + (!value.isActive ? "unselected" : "selected")
+            }
+          >
+            Home
+          </NavLink> | 
+         
+          <Link to="/contact">Contact</Link> |
           <Link to="/invoice">Invoice</Link>
         </nav>
 
